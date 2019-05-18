@@ -1,3 +1,12 @@
+---
+title: '[片段] SpringBoot Mybatis配置'
+date: '2019-03-13 0:00:00'
+tags:
+    - spring
+    - java
+    - mybatis
+    - 代码
+---
 ## 【片段】SpringBoot Mybatis配置
 
 纯记录，供自己参考🤣。
