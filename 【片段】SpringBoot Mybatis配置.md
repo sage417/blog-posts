@@ -1,6 +1,6 @@
 ---
 title: '[片段] SpringBoot Mybatis配置'
-date: '2019-03-13 0:00:00'
+date: '2019-03-13 0:00:01'
 tags:
     - spring
     - java
