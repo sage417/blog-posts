@@ -1,7 +1,7 @@
 ---
 title: IO Modle
 date: 2019-05-20 15:39:56
-thumbnail: /bg/BingWallpaper-2019-05-20.jpg
+thumbnail: https://i.loli.net/2019/05/20/5ce2a2312cd3a25144.jpg
 tags:
     - java
     - linux
