@@ -6,10 +6,6 @@ tags:
     - 代码
 ---
 
-### [片段]使用TypeToken在运行期保存泛型信息
-
-
-
 一般来说可以使用getGenericSuperclass 获取子类范型信息，但是泛型有嵌套的话想获取完整信息还是有点复杂的。例如：Message<List<T>> 有两个泛型信息。
 
 guava中有强大的TypeToken帮助你保存复杂泛型信息，可以参考：

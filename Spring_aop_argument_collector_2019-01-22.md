@@ -8,8 +8,6 @@ tags:
     - 代码
 ---
 
-## 【片段】 Java收集方法参数+Spring DataBinder
-
 #### 收集参数
 
 目前是使用了spring aop 来拦截方法调用，把方法参数包装成Map形式
