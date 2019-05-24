@@ -6,6 +6,9 @@ tags:
     - spring
     - aop
     - 代码
+categories:
+    - Java框架
+    - Spring
 ---
 
 #### 收集参数

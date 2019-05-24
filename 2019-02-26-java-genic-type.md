@@ -4,6 +4,8 @@ date: '2019-02-26 10:00:00'
 tags:
     - java
     - 代码
+categories:
+    - Java基础
 ---
 
 一般来说可以使用getGenericSuperclass 获取子类范型信息，但是泛型有嵌套的话想获取完整信息还是有点复杂的。例如：Message<List<T>> 有两个泛型信息。

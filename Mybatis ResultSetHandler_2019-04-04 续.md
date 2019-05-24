@@ -5,6 +5,9 @@ tags:
     - mybatis
     - java
     - 代码
+categories:
+    - Java框架
+    - Mybatis
 ---
 
 这次拦截的方法是handleResultSets(Statement stmt)，用来批量解密用@Encrypted注解的String字段。

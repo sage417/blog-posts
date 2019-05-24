@@ -4,6 +4,8 @@ date: 2018-07-02 15:39:56
 tags:
     - java
     - 代码
+categories:
+    - Java并发
 ---
 
 #### AbstractQueuedSynchronizer 数据结构

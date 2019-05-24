@@ -5,6 +5,8 @@ thumbnail: /images/BingWallpaper-2019-05-20.jpg
 tags:
     - java
     - linux
+categories:
+    - Java基础
 ---
 ### 操作系统IO模型与Java IO
 

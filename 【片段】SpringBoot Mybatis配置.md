@@ -6,6 +6,9 @@ tags:
     - java
     - mybatis
     - 代码
+categories:
+    - Java框架
+    - Mybatis
 ---
 
 纯记录，供自己参考🤣。
