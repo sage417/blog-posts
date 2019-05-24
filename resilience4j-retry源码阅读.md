@@ -5,8 +5,8 @@ tags:
     - 代码
 	- java
 categories:
-    - Java框架
-    - resilience4j
+    - 中间件
+    - 'resilience4j'
 ---
 
 resilience4j 源码还是比较清晰简单的，比较适合阅读。
