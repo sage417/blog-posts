@@ -1,7 +1,7 @@
 ---
 title: 'Cache Aside（旁路缓存）策略'
 date: '2019-12-01 10:00:00'
-thumbnail: https://sm.ms/image/Ro1WXK3kBUxCcLZ
+thumbnail: https://i.loli.net/2019/12/03/Ro1WXK3kBUxCcLZ.jpg
 tags:
     - 工作
     - 缓存
