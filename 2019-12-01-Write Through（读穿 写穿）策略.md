@@ -1,5 +1,5 @@
 ---
-title: 'Cache Aside（旁路缓存）策略'
+title: 'Write Through（读穿 写穿）策略'
 date: '2019-12-01 10:00:00'
 thumbnail: https://sm.ms/image/M1cCnRUASwytQ3j
 tags:
