@@ -1,7 +1,7 @@
 ---
 title: '[片段] Mybatis ParameterHandler 实践'
 date: '2019-04-04 10:00:00'
-thumbnail: https://i.loli.net/2019/12/04/RUNcmFlT5ajLCAo.jpg
+thumbnail: https://i.loli.net/2019/12/03/M1cCnRUASwytQ3j.jpg
 tags:
     - mybatis
     - java
