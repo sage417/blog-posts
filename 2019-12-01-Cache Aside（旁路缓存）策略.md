@@ -1,6 +1,6 @@
 ---
-title: 'Cache Aside（旁路缓存）策略'
-date: '2019-12-01 10:00:00'
+title: '缓存专题(二) Cache Aside（旁路缓存）策略'
+date: '2019-12-01 02:00:00'
 thumbnail: https://i.loli.net/2019/12/03/Ro1WXK3kBUxCcLZ.jpg
 tags:
     - 工作
@@ -10,8 +10,6 @@ categories:
     - 架构
     - 缓存
 ---
-
-### Cache Aside（旁路缓存）策略
 
 我们来考虑一种最简单的业务场景，比方说在你的电商系统中有一个用户表，表中只有 ID 和年龄两个字段，缓存中我们以 ID 为 Key 存储用户的年龄信息。那么当我们要把 ID 为 1 的用户的年龄从 19 变更为 20，要如何做呢？
 

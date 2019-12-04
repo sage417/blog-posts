@@ -1,6 +1,6 @@
 ---
 title: '[片段] Mybatis ParameterHandler 实践'
-date: '2019-12-06 10:00:00'
+date: '2019-12-04 00:00:00'
 thumbnail: https://i.loli.net/2019/12/04/RUNcmFlT5ajLCAo.jpg
 tags:
     - mybatis

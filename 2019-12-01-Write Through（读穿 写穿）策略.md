@@ -1,6 +1,6 @@
 ---
-title: 'Write Through（读穿 写穿）策略'
-date: '2019-12-01 10:00:00'
+title: '缓存专题(三) Write Through（读穿 写穿）策略'
+date: '2019-12-01 03:00:00'
 thumbnail: https://i.loli.net/2019/12/03/M1cCnRUASwytQ3j.jpg
 tags:
     - 工作
