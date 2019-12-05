@@ -93,7 +93,6 @@ public class EncryptInterceptor implements Interceptor {
             final Object parameterObject = parameterHandler.get("parameterObject");
             final Configuration configuration = parameterHandler.get("configuration");
 
-
             if (parameterObject instanceof DefaultSqlSession.StrictMap) {
                 // 单个Collection/Map/Array参数
                 DefaultSqlSession.StrictMap<?> paramMap = (DefaultSqlSession.StrictMap<?>) parameterObject;
@@ -111,9 +110,7 @@ public class EncryptInterceptor implements Interceptor {
 
                 if (!isUserDefinedClass(componentType)) break;
 
-                final Flux<CryptContext> collectionFlux = collection(configuration, collection, parameterObject.getClass());
-
-                contextFlux = collectionFlux;
+                contextFlux = collection(configuration, collection, componentType);
 
             } else if (parameterObject instanceof MapperMethod.ParamMap) {
                 // 多个参数
@@ -154,8 +151,7 @@ public class EncryptInterceptor implements Interceptor {
 
             } else if (isUserDefinedClass(parameterObject.getClass())) {
                 // 单个非Collection/Map/Array参数
-                final Flux<CryptContext> singleFlux = collection(configuration, Collections.singletonList(parameterObject), parameterObject.getClass());
-                contextFlux = singleFlux;
+                contextFlux = collection(configuration, Collections.singletonList(parameterObject), parameterObject.getClass());
             } else {
                 // 不是用interface的情况
             }
@@ -187,10 +183,9 @@ public class EncryptInterceptor implements Interceptor {
     }
 
     private List<CryptContext> encrypt(Flux<CryptContext> contextFlux) {
-        final Flux<CryptContext> publish = contextFlux
-                .filter(context -> StringUtils.isNotBlank(context.value));
-
-        return publish.buffer(1000)
+        return contextFlux
+                .filter(context -> StringUtils.isNotBlank(context.value))
+                .buffer(1000)
                 .doOnNext(contexts -> {
                     Map<String, String> secretMap = Collections.emptyMap();
                     try {
