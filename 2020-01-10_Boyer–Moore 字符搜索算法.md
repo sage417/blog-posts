@@ -4,11 +4,11 @@ date: '2020-01-10 00:00:00'
 thumbnail: https://i.loli.net/2020/01/14/zQSP9xfZnBoYLNc.jpg
 tags:
     - 工作
-    - 消息
-    - 分布式
+    - 代码
+    - 算法
 categories:
-    - 架构
-    - 消息
+    - 算法
+    - 字符串
 ---
 
 因为字符比较是从右往左比较的，所以第一层循环  `needle.length + 1` <= i < `haystack.length`。
