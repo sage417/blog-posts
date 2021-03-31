@@ -1,7 +1,7 @@
 ---
 title: '清醒思考的艺术-checklist'
 date: '2020-02-01 00:00:00'
-thumbnail: https://i.loli.net/2020/02/02/M7WtmcIu2YOJyjf.jpg
+cover: https://i.loli.net/2020/02/02/M7WtmcIu2YOJyjf.jpg
 tags:
     - 读书
 categories:

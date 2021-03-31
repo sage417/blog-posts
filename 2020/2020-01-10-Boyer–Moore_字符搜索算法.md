@@ -1,7 +1,7 @@
 ---
 title: 'Boyer–Moore 字符搜索算法'
 date: '2020-01-10 00:00:00'
-thumbnail: https://i.loli.net/2020/01/14/zQSP9xfZnBoYLNc.jpg
+cover: https://i.loli.net/2020/01/14/zQSP9xfZnBoYLNc.jpg
 tags:
     - 工作
     - 代码

@@ -1,7 +1,7 @@
 ---
 title: '排查docker oomkillded问题'
 date: '2020-05-10 22:00:00'
-thumbnail: https://i.loli.net/2020/05/10/gHNt97KdvDYPCwq.jpg
+cover: https://i.loli.net/2020/05/10/gHNt97KdvDYPCwq.jpg
 toc: true
 tags:
     - 操作系统

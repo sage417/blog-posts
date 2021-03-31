@@ -1,7 +1,7 @@
 ---
 title: '使用Visual Studio Code阅读Switch Homebrew程序源码'
 date: '2020-06-28 12:00:00'
-thumbnail: https://i.loli.net/2020/06/28/4eZCAUgk3WzfmHi.jpg
+cover: https://i.loli.net/2020/06/28/4eZCAUgk3WzfmHi.jpg
 toc: true
 categories:
     - DevKitPro
