@@ -13,10 +13,13 @@ Visual Studio Code是当之无愧的代码利器，我看重的正是它独到�
 
 ## 第一步：搭建编译环境
 
-DevKitPro组织维护着为任天堂系列主机做开发的工具集，这使得下载开发Switch上的程序更为简便。**在[这里](https://devkitpro.org/wiki/devkitPro_pacman)下载包管理工具`dkp-pacman`**，然后安装下列包：
+DevKitPro组织维护着为任天堂系列主机做开发的工具集，这使得下载开发Switch上的程序更为简便。在[这里](https://devkitpro.org/wiki/devkitPro_pacman)下载包管理工具`dkp-pacman`，然后安装下列包：
 
 ```
+# 安装
 sudo dkp-pacman -S switch-dev
+# 更新
+sudo dkp-pacman -Syu
 ```
 
 使用Root权限安装，默认会装到/opt/devkitpro。
