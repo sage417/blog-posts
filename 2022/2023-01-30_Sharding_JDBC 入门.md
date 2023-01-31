@@ -8,7 +8,7 @@ Sharding-JDBC 最早是当当网内部使用的一款分库分表框架，到201
 
 随着版本的不断更迭 ShardingSphere 的核心功能也变得多元化起来。从最开始 Sharding-JDBC 1.0 版本只有数据分片，到 Sharding-JDBC 2.0 版本开始支持数据库治理（注册中心、配置中心等等），再到 Sharding-JDBC 3.0版本又加分布式事务 （支持 Atomikos、Narayana、Bitronix、Seata），如今已经迭代到了 Sharding-JDBC 4.0 版本。
 
-![](C:\Users\yufeng.jin\Desktop\新建文件夹 (2)\37cd2d870a2f68a5304997aec17b53d81f7f49.png)
+![37cd2d870a2f68a5304997aec17b53d81f7f49.png](https://s2.loli.net/2023/01/31/THGQO8vKcp9weW1.png)
 
 
 现在的 ShardingSphere 不单单是指某个框架而是一个生态圈，这个生态圈 Sharding-JDBC、Sharding-Proxy 和 Sharding-Sidecar 这三款开源的分布式数据库中间件解决方案所构成。
@@ -31,7 +31,7 @@ ShardingSphere 的前身就是 Sharding-JDBC，所以它是整个框架中最为
 
 一般我们在提到分库分表的时候，大多是以水平切分模式（水平分库、分表）为基础来说的，数据分片将原本一张数据量较大的表 t_order 拆分生成数个表结构完全一致的小数据量表 t_order_0、t_order_1、···、t_order_n，每张表只存储原大表中的一部分数据，当执行一条SQL时会通过 分库策略、分片策略 将数据分散到不同的数据库、表内。
 
-![](C:\Users\yufeng.jin\Desktop\新建文件夹 (2)\357c9a6065cf897f9ac02664575f01f8fd7f8f.png)
+![357c9a6065cf897f9ac02664575f01f8fd7f8f.png](https://s2.loli.net/2023/01/31/BcwTpZsRJN8OfhH.png)
 
  
 
@@ -61,7 +61,7 @@ ShardingSphere 的前身就是 Sharding-JDBC，所以它是整个框架中最为
 
 用于分片的数据库字段。我们将 t_order 表分片以后，当执行一条SQL时，通过对字段 order_id 取模的方式来决定，这条数据该在哪个数据库中的哪个表中执行，此时 order_id 字段就是 t_order 表的分片健。
 
-![](C:\Users\yufeng.jin\Desktop\新建文件夹 (2)\391fef3850fd6eaef447679258468417b4fabf.png)
+![391fef3850fd6eaef447679258468417b4fabf.png](https://s2.loli.net/2023/01/31/4QznMO2TCwKaESg.png)
 
  
 
@@ -87,7 +87,7 @@ ShardingSphere 的前身就是 Sharding-JDBC，所以它是整个框架中最为
 
 分库、分表的分片策略配置是相对独立的，可以各自使用不同的策略与算法，每种策略中可以是多个分片算法的组合，每个分片算法可以对多个分片健做逻辑判断。
 
-![](C:\Users\yufeng.jin\Desktop\新建文件夹 (2)\17e8c31099548f64886625a65b19ab87893fd8.png)
+![17e8c31099548f64886625a65b19ab87893fd8.png](https://s2.loli.net/2023/01/31/cwdgNeqvKskS73F.png)
 
 分片算法和分片策略的关系
 
@@ -218,7 +218,7 @@ SELECT * FROM t_order_1 o JOIN t_order_item_1 i ON o.order_id=i.order_id
 
 
 
- ![](C:\Users\yufeng.jin\Desktop\新建文件夹 (2)\476aa9d21749fad3d77018b69ecac4c58f5d4c.png)
+![476aa9d21749fad3d77018b69ecac4c58f5d4c.png](https://s2.loli.net/2023/01/31/1uDGhNOJVq54wKm.png)
 
 笛卡尔积查询
 
@@ -232,7 +232,7 @@ SELECT * FROM t_order_1 o JOIN t_order_item_1 i ON o.order_id=i.order_id
 
 
 
-![](C:\Users\yufeng.jin\Desktop\新建文件夹 (2)\420c8da9949389203424118e98818afec717d9.png)
+![420c8da9949389203424118e98818afec717d9.png](https://s2.loli.net/2023/01/31/R5L1wl8PJHtBC4h.png)
 
  绑定表关系
 
@@ -244,21 +244,21 @@ SELECT * FROM t_order_1 o JOIN t_order_item_1 i ON o.order_id=i.order_id
 
 从名字上不难看出，Sharding-JDBC 和 JDBC有很大关系，我们知道 JDBC 是一种 Java 语言访问关系型数据库的规范，其设计初衷就是要提供一套用于各种数据库的统一标准，不同厂家共同遵守这套标准，并提供各自的实现方案供应用程序调用。
 
-![](C:\Users\yufeng.jin\Desktop\新建文件夹 (2)\77c415b51b33e9ed0b8844aaaa64fcba718a7d.png)
+![77c415b51b33e9ed0b8844aaaa64fcba718a7d.png](https://s2.loli.net/2023/01/31/QzH2FoJ7DvsUbT5.png)
 
  
 
 
 但其实对于开发人员而言，我们只关心如何调用 JDBC API 来访问数据库，只要正确使用 DataSource、Connection、Statement 、ResultSet 等 API 接口，直接操作数据库即可。所以如果想在 JDBC 层面实现数据分片就必须对现有的 API 进行功能拓展，而 Sharding-JDBC 正是基于这种思想，重写了 JDBC 规范并完全兼容了 JDBC 规范。
 
-![](C:\Users\yufeng.jin\Desktop\新建文件夹 (2)\a5eceb153a77640d6f4504e893dc74ae00507a.png)
+![a5eceb153a77640d6f4504e893dc74ae00507a.png](https://s2.loli.net/2023/01/31/xD3Z8PrmApVMYg2.png)
 
 ###  JDBC流程
 
 
 对原有的 DataSource、Connection 等接口扩展成 ShardingDataSource、ShardingConnection，而对外暴露的分片操作接口与 JDBC 规范中所提供的接口完全一致，只要你熟悉 JDBC 就可以轻松应用 Sharding-JDBC 来实现分库分表。
 
-![](C:\Users\yufeng.jin\Desktop\新建文件夹 (2)\c86fa7c9708dfeaf0dc590c13b018b96ec07b9.png)
+![c86fa7c9708dfeaf0dc590c13b018b96ec07b9.png](https://s2.loli.net/2023/01/31/ojFqS98TcU2e3Rh.png)
 
  
 
@@ -327,7 +327,7 @@ public interface Target {
 ```java
 public class Adaptee {
 
-    public void greet(){
+    public void graeet(){
 
     }
     public void world(){
@@ -368,7 +368,7 @@ public class Adapter extends Adaptee implements Target {
 
 下面我们通过 ShardingDataSource 类源码简单看下实现过程，下图是继承关系流程图。
 
-![](C:\Users\yufeng.jin\Desktop\新建文件夹 (2)\49b41c48798299718fa1014a36868eea76537d.png)
+![49b41c48798299718fa1014a36868eea76537d.png](https://s2.loli.net/2023/01/31/VzXIaTsuYUmpOBP.png)
 
 ###  ShardingDataSource实现流程
 
@@ -555,7 +555,8 @@ public class JdbcMethodInvocation {
 
  
 
-大致的执行流程：SQL 解析 -> 执⾏器优化 -> SQL 路由 -> SQL 改写 -> SQL 执⾏ -> 结果归并 六步组成，一起瞅瞅每个步骤做了点什么。![](C:\Users\yufeng.jin\Desktop\新建文件夹 (2)\83520a2514c3691be5b36638329a602e3feef1.png)
+大致的执行流程：SQL 解析 -> 执⾏器优化 -> SQL 路由 -> SQL 改写 -> SQL 执⾏ -> 结果归并 六步组成，一起瞅瞅每个步骤做了点什么。
+![83520a2514c3691be5b36638329a602e3feef1.png](https://s2.loli.net/2023/01/31/Zesz5XyntvPljWO.png)
 
 
 
@@ -572,7 +573,7 @@ SELECT order_no,price FROM t_order_ where user_id = 10086 and order_status > 0
 
 接着语法解析会将拆分后的SQL转换为抽象语法树，通过对抽象语法树遍历，提炼出分片所需的上下文，上下文包含查询字段信息（Field）、表信息（Table）、查询条件（Condition）、排序信息（Order By）、分组信息（Group By）以及分页信息（Limit）等，并标记出 SQL中有可能需要改写的位置。
 
- ![](https://dl-harmonyos.51cto.com/images/202206/e4bc5c402444ed05610427bea57676e831fc5e.png)
+![e4bc5c402444ed05610427bea57676e831fc5e.png](https://s2.loli.net/2023/01/31/5T9aFAmKj1ZNsSo.png)
 
 抽象语法树
 
@@ -588,7 +589,7 @@ SELECT order_no,price FROM t_order_ where user_id = 10086 and order_status > 0
 
 SQL 路由通过解析分片上下文，匹配到用户配置的分片策略，并生成路由路径。简单点理解就是可以根据我们配置的分片策略计算出 SQL该在哪个库的哪个表中执行，而SQL路由又根据有无分片健区分出 分片路由 和 广播路由。
 
-![](https://dl-harmonyos.51cto.com/images/202206/984dca3599293c51191234fb2fae220084e8a8.png)
+![984dca3599293c51191234fb2fae220084e8a8.png](https://s2.loli.net/2023/01/31/BMxRqZ4CcOmSsak.png)
 
 ####  官方路由图谱
 
