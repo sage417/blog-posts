@@ -9,9 +9,11 @@ categories:
 ## 问题背景
 在windows系统上安装Rust需要C++ 编译工具，正常使用Visual Studio安装工具将消耗大量空间和时间下载安装组件，这里提供另外一种安装流程，以最快速度在新电脑上成功安装并运行Rust代码
 
+再次安装时发现一篇英文文档，描述如何安装 build tools 可以参考(windows-msvc)[https://rust-lang.github.io/rustup/installation/windows-msvc.html]
+
 ## 安装流程
 
-1. 使用vs_BuildTools.exe安装C++ build tools，中文名称为MSBuild工具，安装耗时2分钟左右
+1. 使用vs_BuildTools.exe安装C++ build tools，选择安装单个组件，选择MSVC v143 - VS 2022 C++ x64/x86 build tools (Latest)和Windows 11 SDK (10.0.22621.0)
 2. Rust官网下载rustup-init.exe 进行安装
 3. 使用rustup show来验证安装的组件信息
 
